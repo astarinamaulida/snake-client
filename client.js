@@ -18,10 +18,10 @@ const connect = function () {
 
   conn.write(`${name}`);
 
-  setInterval(() => { conn.write(`${up}`)}, 500);
-  setInterval(() => { conn.write(`${down}`)}, 500);
-  setInterval(() => { conn.write(`${left}`)}, 500);
-  setInterval(() => { conn.write(`${right}`)}, 500);
+  //setInterval(() => { conn.write(`${up}`)}, 500);
+  //setInterval(() => { conn.write(`${down}`)}, 500);
+  //setInterval(() => { conn.write(`${left}`)}, 500);
+  //setInterval(() => { conn.write(`${right}`)}, 500);
 
   conn.on("connect", () => {
     console.log('You are connected! Enjoy the game!')
