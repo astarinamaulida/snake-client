@@ -2,7 +2,12 @@
 const net = require("net");
 
 const connect = function () {
-  const name = 'Name: Astalavistabeybeh'
+  const name = 'Name: AST'
+  const up = "Move: up";
+  const down = "Move: down";
+  const left = "Move: left";
+  const right = "Move: right";
+
   const conn = net.createConnection({
     host: '135.23.223.133', // IP address here,
     port: '50542' // PORT number here,
@@ -12,6 +17,11 @@ const connect = function () {
   conn.setEncoding("utf8");
 
   conn.write(`${name}`);
+
+  setInterval(() => { conn.write(`${up}`)}, 500);
+  setInterval(() => { conn.write(`${down}`)}, 500);
+  setInterval(() => { conn.write(`${left}`)}, 500);
+  setInterval(() => { conn.write(`${right}`)}, 500);
 
   conn.on("connect", () => {
     console.log('You are connected! Enjoy the game!')
