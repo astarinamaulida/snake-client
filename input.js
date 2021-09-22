@@ -15,15 +15,16 @@ const handleUserInput = function (input) {
   // your code here
   if (input === '\u0003') {
     process.exit();
-  }  if (input === 'w') {
+  } if (input === 'w') {
     connection.write("Move: up");
-  }  if (input === 'a') {
+  } if (input === 'a') {
     connection.write("Move: left");
-  }  if (input === 's') {
+  } if (input === 's') {
     connection.write("Move: down");
-  }  if (input === 'd') {
+  } if (input === 'd') {
     connection.write("Move: right");
-  }
+  } 
+  connection.write("Say: I'm hungry!")
 };
 
 module.exports = setupInput;
